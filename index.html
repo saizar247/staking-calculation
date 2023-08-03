@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FTC Staking Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <img src="img.png" alt="Fintoch" id="logo">
+    <h1>FTC Staking Calculator</h1>
+    <div class="input-group">
+        <label for="usdtAmount">Amount of USDT:</label>
+        <input type="number" id="usdtAmount" placeholder="Enter amount">
+    </div>
+
+<div class="input-group">
+    <label for="numDays">Number of Days:</label>
+    <select id="numDays">
+        <option value="7" data-percent="0.01">7 Days</option>
+        <option value="15" data-percent="0.011">15 Days</option>
+        <option value="30" data-percent="0.012">30 Days</option>
+    </select>
+</div>
+
+
+    <div class="result">
+        <label>Result:</label>
+        <span id="calculationResult">0</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
