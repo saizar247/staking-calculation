@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const calculationResultSpan = document.getElementById("calculationResult");
     const cycleResult1Span = document.getElementById("cycleResult1");
     const cycleResult2Span = document.getElementById("cycleResult2");
-    const combinedResultSpan = document.getElementById("combinedResult");
 
     usdtAmountInput.addEventListener("input", calculate);
     numDaysSelect.addEventListener("change", calculate);
@@ -21,10 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultB = ((parseFloat(resultA) + amount) * days * percent).toFixed(2);
         cycleResult1Span.textContent = resultB;
 
-        const resultC = ((parseFloat(resultB) + amount) * days * percent).toFixed(2);
+        const resultC = ((parseFloat(resultA) + parseFloat(resultB) + amount) * days * percent).toFixed(2);
         cycleResult2Span.textContent = resultC;
-
-        const combinedResult = (parseFloat(resultA) + parseFloat(resultB) + parseFloat(resultC)).toFixed(2);
-        combinedResultSpan.textContent = combinedResult;
     }
 });
