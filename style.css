@@ -5,7 +5,7 @@ background-color: rgba(245, 245, 245, 0.1); /* Opacity is set here (0.1) */
     padding: 0;
 	background-image: url(img.png); /* Replace 'watermark.png' with your image file name */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: bottom right;
     background-attachment: fixed;
 }
 
