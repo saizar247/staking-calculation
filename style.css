@@ -10,20 +10,38 @@ background-color: rgba(245, 245, 245, 0.1); /* Opacity is set here (0.1) */
 }
 
 .container {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 100%;
     padding: 20px;
-    background: #f5f5f5;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+/* Example: Adjust font size */
 h1 {
-    text-align: center;
+    font-size: 24px;
 }
 
-.input-group {
+/* Example: Increase spacing between elements */
+.input-group,
+.result {
     margin-bottom: 15px;
+}
+/* Small screens (e.g., phones) */
+@media (max-width: 767px) {
+    /* Example: Adjust layout or font size for smaller screens */
+    .container {
+        padding: 10px;
+    }
+
+    /* Example: Adjust input size and spacing */
+    .input-group input[type="number"],
+    .input-group select,
+    .result span {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+}
 }
 
 label {
@@ -78,3 +96,13 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+
+.input-group input[type="number"],
+.input-group select,
+.result span {
+    background-color: rgba(220, 220, 220, 0.8); /* Adjust the color and opacity as needed */
+    box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+}
+
+/* ... Rest of your CSS ... */
