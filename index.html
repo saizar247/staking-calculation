@@ -25,6 +25,19 @@
             <span id="calculationResult">0</span>
         </div>
     </div>
+</div>
+<button id="viewImageButton">Staking Table</button>
+
+<script>
+    document.getElementById('viewImageButton').addEventListener('click', function () {
+        // Specify the path to the image
+        const imagePath = 'excel.png'; // Replace with your image's path
+
+        // Open a new page with the image
+        window.open(imagePath, '_blank');
+    });
+</script>
+
 
     <script src="script.js"></script>
 </body>
